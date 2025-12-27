@@ -69,7 +69,7 @@ const FeaturedBooks = async () => {
                   <div className="pt-4">
                     <hr className="text-accentColor" />
                     <a
-                      href="#"
+                      href="/books"
                       className="text-[13px] w-full mx-auto flex items-center justify-center font-semibold uppercase px-4 py-2"
                     >
                       View Details
