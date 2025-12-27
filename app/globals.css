@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-headingFont: var(--font-heading), sans-serif;
+  --font-bodyFont: var(--font-body), sans-serif;
+  --color-primaryColor: #ecf4e8;
+  --color-secondaryColor: #0f0e0e;
+  --color-accentColor: #41a67e;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  body {
+    @apply bg-primaryColor text-secondaryColor m-0 font-bodyFont;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  p {
+    @apply text-[14px] md:text-[16px] tracking-tight leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bodyFont;
+  }
+
+  h1 {
+    @apply text-[40px] leading-[40px] md:leading-[60px] md:text-[60px] tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-3xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-[22px] font-bold;
+  }
+
+  .green-button {
+    @apply inline-flex items-center justify-center px-6 py-2 bg-accentColor text-white text-[15px] md:text-[17px] rounded-md transition-transform transform hover:scale-105 shadow-lg;
+  }
+
+  .outline-button {
+    @apply inline-flex items-center justify-center px-6 py-[7px] hover:scale-105 border text-[15px] md:text-[17px] rounded-md transition-colors shadow-lg;
+  }
+
+  .input-contact-style {
+    @apply w-full appearance-none rounded-xl border border-accentColor/30 px-4 py-3 text-sm shadow-sm outline-none transition focus:border-accentColor focus:ring-2 focus:ring-accentColor/30;
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
 }
