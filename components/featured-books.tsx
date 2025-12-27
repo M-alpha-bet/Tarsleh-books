@@ -63,7 +63,7 @@ const FeaturedBooks = async () => {
                   </div>
                 </div>
                 <div className="p-2">
-                  <p className="mb-4 w-[360px] mx-auto text-center overflow-hidden">
+                  <p className="mb-4 text-center overflow-hidden">
                     {book.description || "Description coming soon."}
                   </p>
                   <div className="pt-4">

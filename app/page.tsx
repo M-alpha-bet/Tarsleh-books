@@ -71,10 +71,10 @@ export default function Home() {
             </h1>
 
             <div className="flex pt-4 items-center justify-center gap-4">
-              <a href="#books">
+              <a href="/books">
                 <button className="green-button">Explore books</button>
               </a>
-              <a href="#about" className="outline-button">
+              <a href="/blogs" className="outline-button">
                 Read blogs
                 <TbArrowRight className="ml-3" />
               </a>
