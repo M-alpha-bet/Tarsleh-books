@@ -19,6 +19,7 @@ export type SanityBook = {
   editors?: string | null;
   language?: string | null;
   purchaseLink?: string | null;
+  timsmekLink?: string | null;
   pitch?: string | null;
   description: string;
   coverFront?: SanityBookImage;
@@ -32,6 +33,7 @@ type SanityBookQueryResult = {
   editors?: string | null;
   language?: string | null;
   purchaseLink?: string | null;
+  timsmekLink?: string | null;
   pitch?: string | null;
   cover?: {
     front?: {
@@ -52,6 +54,7 @@ const BOOKS_QUERY = `*[_type == "book"] | order(_createdAt desc) {
   editors,
   language,
   purchaseLink,
+  timsmekLink,
   pitch,
   cover {
     front {
@@ -77,6 +80,7 @@ export const fetchBooks = async (): Promise<SanityBook[]> => {
         ? book.language.charAt(0).toUpperCase() + book.language.slice(1)
         : null,
       purchaseLink: book.purchaseLink ?? null,
+      timsmekLink: book.timsmekLink ?? null,
       pitch: book.pitch ?? null,
       description: portableTextToPlain(book.bookDescription ?? []),
       coverFront: book.cover?.front ?? null,

@@ -52,6 +52,11 @@ export const bookType = defineType({
       title: "Purchase link",
     }),
     defineField({
+      name: "timsmekLink",
+      type: "url",
+      title: "Timsmek link",
+    }),
+    defineField({
       name: "pitch",
       type: "text",
       rows: 4,

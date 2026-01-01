@@ -71,6 +71,7 @@ const Footer = () => {
             </Link>
 
             <p className="mt-4 max-w-md text-sm sm:text-base">
+              Tarsleh Books published by The theocratic ministry of Jesus.
               Faith-rooted stories, essays, and resources helping believers grow
               in discernment, boldness, and grace-filled wisdom.
             </p>
@@ -89,7 +90,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 text-sm sm:text-base">
+          <div className="grid grid-cols-2 gap-8 px-2 lg:px-0 text-sm sm:text-base">
             <div>
               <h3 className="text-lg font-semibold tracking-wide">Explore</h3>
               <ul className="mt-4 space-y-3">
@@ -125,7 +126,7 @@ const Footer = () => {
 
           <div>
             <h3 className="text-lg font-semibold tracking-wide">
-              Stay in the Word
+              Keep tabs with us
             </h3>
             <p className="mt-2 text-sm sm:text-base">
               Receive fresh reflections, writing updates, and spiritual

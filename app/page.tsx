@@ -76,7 +76,7 @@ export default function Home() {
               </a>
               <a href="/blogs" className="outline-button">
                 Read blogs
-                <TbArrowRight className="ml-3" />
+                <TbArrowRight className="ml-1" />
               </a>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function Home() {
                 <div className="aspect-video overflow-hidden rounded-2xl shadow-lg">
                   <iframe
                     className="h-full w-full"
-                    src="https://www.youtube.com/embed/eCxRULGmkuc"
+                    src="https://www.youtube.com/embed/ofMDBJ_xTcs?si=GgbkomrsbDEHts-U"
                     title="Paul Tarsleh YouTube Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -162,12 +162,12 @@ export default function Home() {
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.name}
-                  className="p-4 rounded-3xl shadow-lg flex flex-col justify-between items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out"
+                  className="p-4 rounded-3xl shadow-sm border-accentColor/20 border flex flex-col justify-between items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out"
                 >
                   <RiDoubleQuotesL className="text-3xl text-left mb-1" />
                   <p className="mb-2 grow">"{testimonial.quote}"</p>
                   <div className="md:flex md:justify-start md:w-full items-center pt-4">
-                    <div className="relative h-[75px] w-[75px] mx-auto md:mx-0 rounded-full overflow-hidden bg-accentColor">
+                    <div className="relative lg:h-[75px] lg:w-[75px] h-[50px] w-[50px] mx-auto md:mx-0 rounded-full overflow-hidden bg-accentColor">
                       <Image
                         src={testimonial.avatar}
                         alt={testimonial.name}
@@ -192,14 +192,14 @@ export default function Home() {
             <img
               src="/images/otherBook1.png"
               alt="where-is-the-garden-of-eden"
-              className="w-[400px] md:w-[600px] h-[250px] lg:h-[350px]"
+              className="w-[350px] md:w-[600px] h-[220px] lg:h-[350px]"
             />
           </div>
           <div className="flex gap-4 justify-center mt-2">
             <img
               src="/images/otherBook2.png"
               alt="the-evolution-of-man"
-              className="w-[400px] md:w-[600px] h-[250px] lg:h-[350px]"
+              className="w-[350px] md:w-[600px] h-[220px] lg:h-[350px]"
             />
           </div>
         </section>

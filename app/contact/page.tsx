@@ -27,7 +27,7 @@ const contactChannels: ContactChannel[] = [
   {
     title: "General correspondence",
     description:
-      "Questions about books, pastoral resources, or the discipleship community.",
+      "Questions about books, deep knowledge, or the discipleship community.",
     detail: "admin@tarslehbooks.com",
     hint: "Primary inbox",
     icon: TbMail,
@@ -37,7 +37,7 @@ const contactChannels: ContactChannel[] = [
   {
     title: "Speaking & events",
     description:
-      "Invite Paul to preach, facilitate workshops, or serve at conferences.",
+      "Invite Paul to lecture, facilitate workshops, or serve at conferences.",
     detail: "speaking@tarslehbooks.com",
     hint: "Event requests",
     icon: TbMicrophone,
@@ -48,11 +48,11 @@ const contactChannels: ContactChannel[] = [
     title: "Phone & WhatsApp",
     description:
       "For time-sensitive questions and ministry partnerships that need a quick voice connection.",
-    detail: "+231 77 555 0194",
+    detail: "+1 916-804-6620",
     hint: "Call or message",
     icon: TbPhone,
     actionLabel: "Call the office",
-    href: "tel:+231775550194",
+    href: "tel: +1 916-804-6620",
   },
 ];
 
@@ -89,12 +89,6 @@ const topics = [
   "Prayer request or pastoral support",
   "Bulk book order",
   "Other",
-] as const;
-
-const expectationPoints = [
-  "Most inquiries receive a thoughtful reply within 48 business hours.",
-  "Speaking invitations follow with a short intake form to clarify goals and audience.",
-  "Prayer requests are shared with our trusted intercession circle the day they arrive.",
 ] as const;
 
 const faqs = [
@@ -139,7 +133,7 @@ export default function ContactPage() {
               </h1>
               <p className="text-secondaryColor/80 text-center lg:px-[130px]">
                 Whether you’re planning a teaching series, exploring
-                partnerships, or seeking pastoral support, I’d love to hear from
+                partnerships, or seeking deep knowledge, I’d love to hear from
                 you. Share your vision, and we’ll discern the next faithful
                 steps side by side.
               </p>
@@ -161,10 +155,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-6 flex flex-col justify-center text-center gap-1 text-sm text-secondaryColor/70 sm:flex-row sm:items-center sm:gap-4">
-                <span>
-                  <span className="font-semibold mr-1">Office hours: </span>{" "}
-                  Monday – Friday, 9:00 AM – 4:00 PM GMT
-                </span>
+                <span>Leave me a message and I’ll get back to you later.</span>
                 <span
                   aria-hidden
                   className="hidden h-1 w-1 rounded-full bg-secondaryColor/40 sm:inline-block"
@@ -178,14 +169,6 @@ export default function ContactPage() {
         </section>
 
         <section className="container mx-auto md:mt-16 px-5 sm:px-8 lg:px-16">
-          {/* <div className="mx-auto max-w-2xl text-center md:max-w-3xl">
-            <h2 className="mb-4">Choose the pathway that fits your request</h2>
-            <p className="text-base text-secondaryColor/75 md:text-lg">
-              Each inquiry receives focused attention so we can serve you and
-              the people you lead with clarity and grace.
-            </p>
-          </div> */}
-
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {contactChannels.map((channel) => {
               const Icon = channel.icon;
@@ -409,7 +392,7 @@ export default function ContactPage() {
         <section className="container mx-auto mt-20 md:mt-40 px-5 sm:px-8 lg:px-16">
           <div className="grid gap-10 md:grid-cols-2 md:gap-16">
             <div>
-              <hr className="w-[100px] text-accentColor mb-4 mx-auto lg:mx-auto" />
+              <hr className="w-[100px] text-accentColor mb-4 mx-auto lg:mx-0" />
               <h1 className="mt-4 md:mb-4 mb-2 text-center lg:text-left ">
                 Frequently asked questions
               </h1>
@@ -432,37 +415,6 @@ export default function ContactPage() {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section className=" mx-auto mt-12 md:mt-24 px-5 sm:px-8 lg:px-16">
-          <div className="relative overflow-hidden rounded-3xl border border-accentColor/30 bg-linear-to-br from-accentColor/15 via-primaryColor to-white px-8 py-12 shadow-lg">
-            <div className="pointer-events-none absolute -right-20 top-0 h-56 w-56 rounded-full bg-accentColor/25 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-24 left-6 h-64 w-64 rounded-full bg-white/40 blur-3xl" />
-
-            <div className="relative max-full text-center">
-              <h2 className="mb-4 leading-tight">
-                Still discerning your next step?
-              </h2>
-              <p className="text-secondaryColor/80 md:text-lg">
-                Let’s schedule a 15-minute discovery call to hear your heart and
-                explore how we can serve your community.
-              </p>
-
-              <div className="mt-8 text-center gap-4 sm:flex-row sm:items-center">
-                <a
-                  href="mailto:admin@tarslehbooks.com?subject=Discovery%20call%20request"
-                  className="green-button gap-2 sm:w-auto"
-                >
-                  Start the conversation
-                  <TbArrowRight className="h-5 w-5" />
-                </a>
-                <p className="text-sm text-center text-secondaryColor/75 py-4 md:px-[400px]">
-                  Prefer to write everything down? Share context in your message
-                  and we’ll craft a thoughtful reply.
-                </p>
-              </div>
             </div>
           </div>
         </section>

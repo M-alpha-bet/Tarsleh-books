@@ -27,7 +27,7 @@ const FeaturedBooks = async () => {
   return (
     <section id="books" className="py-12 md:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-20">
+        <div className="text-center mb-4 md:mb-10 lg:mb-20">
           <h1 className="mb-2">Featured Books</h1>
           <p className="mx-auto">
             Explore a selection of my most popular and critically acclaimed
@@ -75,14 +75,19 @@ const FeaturedBooks = async () => {
                       View Details
                     </a>
                     <hr className="text-accentColor" />
+                    <a
+                      href={book.timsmekLink ?? "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[13px] w-full mx-auto flex items-center justify-center font-semibold uppercase px-4 py-2"
+                    >
+                      Shop on Timsmek{" "}
+                      <ArrowUpRight className="inline-flex size-4 ml-2" />
+                    </a>
 
                     <hr className="text-accentColor" />
                     <a
                       href={book.purchaseLink ?? "#"}
-                      target={book.purchaseLink ? "_blank" : undefined}
-                      rel={
-                        book.purchaseLink ? "noopener noreferrer" : undefined
-                      }
                       className="text-[13px] w-full mx-auto flex items-center justify-center font-semibold uppercase px-4 py-2"
                     >
                       Order on amazon{" "}
@@ -127,14 +132,26 @@ const FeaturedBooks = async () => {
                     <p>{book.pitch ?? "Details coming soon."}</p>
                     <div className="flex justify-between mt-16">
                       {book.purchaseLink ? (
-                        <a
-                          href={book.purchaseLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="green-button inline-flex items-center justify-center"
-                        >
-                          Buy now <ArrowUpRight className="inline-flex ml-2" />
-                        </a>
+                        <div className="flex justify-between w-[90%]">
+                          <a
+                            href={book.purchaseLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="green-button inline-flex items-center justify-center"
+                          >
+                            Buy on Amazon{" "}
+                            <FaAmazon className="inline-flex ml-2" />
+                          </a>
+                          <a
+                            href={book.purchaseLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="green-button inline-flex items-center justify-center"
+                          >
+                            Buy on Timsmek{" "}
+                            <ArrowUpRight className="inline-flex ml-2" />
+                          </a>
+                        </div>
                       ) : (
                         <span className="text-muted-foreground text-sm">
                           Purchase link coming soon

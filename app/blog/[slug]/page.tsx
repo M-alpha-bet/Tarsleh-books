@@ -157,20 +157,20 @@ const BlogPostPage = async ({ params }: BlogPageProps) => {
   return (
     <>
       <Navbar />
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16 pt-32 md:pt-40 max-w-5xl">
-        <article>
-          <header className="text-center mb-6">
+      <main className="pt-16 lg:pt-24">
+        <article className="mx-auto px-4 sm:px-6 lg:px-[130px] py-16 md:py-24">
+          <header className="text-center mb-12 md:mb-16">
             <hr className="w-[100px] mx-auto text-accentColor mb-4" />
-            <h1 className=" mb-4">{post.title}</h1>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+            <h1 className="mb-4">{post.title}</h1>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-secondaryColor/60">
               <span>{publishedDate}</span>
               <span>•</span>
               <span>{readTime}</span>
             </div>
           </header>
 
-          {heroImage ? (
-            <div className="relative w-full h-[320px] sm:h-[480px] mb-12 overflow-hidden rounded-4xl shadow-lg">
+          {heroImage && (
+            <div className="relative w-full aspect-video mb-12 overflow-hidden rounded-2xl shadow-lg">
               <Image
                 src={heroImage}
                 alt={post.mainImage?.alt || `${post.title} cover image`}
@@ -180,9 +180,9 @@ const BlogPostPage = async ({ params }: BlogPageProps) => {
                 priority
               />
             </div>
-          ) : null}
+          )}
 
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none text-secondaryColor">
             <PortableText
               value={post.body}
               components={portableTextComponents}

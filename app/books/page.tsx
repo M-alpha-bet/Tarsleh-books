@@ -6,6 +6,7 @@ import { fetchBooks } from "@/sanity/lib/books";
 import { urlFor } from "@/sanity/lib/image";
 import { ArrowUpRight } from "lucide-react";
 import { TbMail } from "react-icons/tb";
+import { FaAmazon } from "react-icons/fa";
 
 const BooksPage = async () => {
   const books = await fetchBooks();
@@ -22,7 +23,7 @@ const BooksPage = async () => {
                 Books that challenge, inspire, and draw you deeper into truth.
               </h1>
               <p className="text-muted-foreground leading-relaxed lg:px-[80px]">
-                Explore Paul Tarsleh&apos;s published works—each crafted to
+                Explore Paul Tarsleh&apos;s published works, each crafted to
                 ignite curiosity, provide spiritual clarity, and equip believers
                 to live boldly. Browse the library below to learn more about
                 each title and find the right book for your journey.
@@ -119,15 +120,28 @@ const BooksPage = async () => {
 
                       <div className="flex flex-wrap justify-center pb-4 items-center gap-4 pt-4">
                         {book.purchaseLink ? (
-                          <a
-                            href={book.purchaseLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="green-button inline-flex items-center justify-center px-8 py-3 text-sm font-semibold"
-                          >
-                            Purchase on Amazon{" "}
-                            <ArrowUpRight className="inline-flex ml-2" />
-                          </a>
+                          <div className="flex flex-col justify-center gap-3">
+                            <a
+                              href={book.purchaseLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="green-button inline-flex items-center justify-center px-8 py-3 text-sm font-semibold"
+                            >
+                              Purchase on Amazon{" "}
+                              <FaAmazon className="inline-flex ml-2" />
+                            </a>
+                            <a
+                              href={
+                                book.timsmekLink ?? "https://store.timsmek.com/"
+                              }
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="green-button inline-flex items-center justify-center px-8 py-3 text-sm font-semibold"
+                            >
+                              Purchase on Timsmek{" "}
+                              <ArrowUpRight className="inline-flex ml-2 size-4" />
+                            </a>
+                          </div>
                         ) : (
                           <span className="text-sm text-muted-foreground">
                             Purchase link coming soon
@@ -176,15 +190,24 @@ const BooksPage = async () => {
                       <p>{book.pitch ?? "Details coming soon."}</p>
                       <div className="flex justify-between mt-16">
                         {book.purchaseLink ? (
-                          <a
-                            href={book.purchaseLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="green-button inline-flex items-center justify-center"
-                          >
-                            Buy now{" "}
-                            <ArrowUpRight className="inline-flex ml-2" />
-                          </a>
+                          <div className="w-[90%] flex justify-between">
+                            <a
+                              href={book.purchaseLink}
+                              className="green-button inline-flex items-center justify-center"
+                            >
+                              Buy on Amazon{" "}
+                              <FaAmazon className="inline-flex ml-2" />
+                            </a>
+                            <a
+                              href={
+                                book.timsmekLink ?? "https://store.timsmek.com/"
+                              }
+                              className="green-button inline-flex items-center justify-center"
+                            >
+                              Buy on Timsmek{" "}
+                              <ArrowUpRight className="inline-flex ml-2" />
+                            </a>
+                          </div>
                         ) : (
                           <span className="text-muted-foreground text-sm">
                             Purchase link coming soon
