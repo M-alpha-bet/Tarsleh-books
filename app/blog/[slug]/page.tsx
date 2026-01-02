@@ -60,22 +60,22 @@ const portableTextComponents: PortableTextComponents = {
       </h3>
     ),
     normal: ({ children }) => (
-      <p className="leading-relaxed text-[15px] mb-5 text-muted-foreground">
+      <p className="leading-relaxed text-[14px] md:text-[16px] mb-5 text-secondaryColor">
         {children}
       </p>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-accentColor pl-6 italic text-xl text-muted-foreground my-6">
+      <blockquote className="border-l-4 border-accentColor pl-6 italic text-xl text-secondaryColor/80 my-6">
         {children}
       </blockquote>
     ),
   },
   marks: {
     em: ({ children }) => (
-      <em className="italic text-muted-foreground">{children}</em>
+      <em className="italic text-secondaryColor">{children}</em>
     ),
     strong: ({ children }) => (
-      <strong className="font-semibold text-primaryColor">{children}</strong>
+      <strong className="font-semibold">{children}</strong>
     ),
     link: ({ value, children }) => {
       const href = (value as { href?: string } | undefined)?.href || "#";
@@ -158,7 +158,7 @@ const BlogPostPage = async ({ params }: BlogPageProps) => {
     <>
       <Navbar />
       <main className="pt-16 lg:pt-24">
-        <article className="mx-auto px-4 sm:px-6 lg:px-[130px] py-16 md:py-24">
+        <article className="mx-auto px-4 sm:px-6 lg:px-[260px] py-16 md:py-24">
           <header className="text-center mb-12 md:mb-16">
             <hr className="w-[100px] mx-auto text-accentColor mb-4" />
             <h1 className="mb-4">{post.title}</h1>
