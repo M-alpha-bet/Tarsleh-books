@@ -112,24 +112,24 @@ export default function Home() {
                 <h2 className="mb-3">Meet Paul Tarsleh</h2>
                 <p className="mb-4 leading-relaxed">
                   Paul Tarsleh was born unto the union of Jonah Seah Tarsleh and
-                  Elizabeth Jah in Liberia - West Africa. He is married and is a
-                  father of six (6) children. He graduated fro High School as
-                  valedictorian for his class. While in school he became a
-                  student journalist so after graduation he started working with
-                  two newspapers, Business Digest and Sports Chronicle. In 1999
-                  he moved to Tabou, Ivory Coast where he took advantage of a
-                  United Nations funded vocational school where he earned an
-                  18-month certificate in Bookkeeping. In a period of two and
-                  half years, 2006 – mid 2008, his interest in writing was
-                  enhanced by the mysterious voice that gave him stories to
-                  write so as to provide answers to various issues dangling on
-                  the minds of people, including religious communities.
+                  Elizabeth Jah in Liberia - West Africa. He is married with
+                  nine children. He graduated from High School as valedictorian
+                  for his class. While in school he became a student journalist
+                  so after graduation he started working with two newspapers in
+                  1990, Business Digest and Sports Chronicle. In 1999 he moved
+                  to Tabou, Ivory Coast, where he took advantage of a United
+                  Nations funded vocational school where he earned an 18-month
+                  certificate in Bookkeeping. In a period of two and half years,
+                  2006 – mid 2008, his interest in writing was enhanced by the
+                  mysterious voice that gave him stories to write so as to
+                  provide answers to various issues dangling on the minds of
+                  people, including religious communities.
                 </p>
                 <p className="mb-10 md:mb-2 leading-relaxed">
-                  He is the author of two wonderful books and in 2018, he has
-                  completed his third manuscript for a new book entitled "The
-                  Truth About Blacks and Human Race" which comes as a result of
-                  what he learned from that mysterious voice.
+                  He is the author of two wonderful books entitled ‘The argument
+                  on God and Creation, and The Flipside of Multipolarity’ which
+                  comes as a result of what he learned from that mysterious
+                  voice.
                 </p>
                 <div className="flex justify-center md:justify-start space-x-16">
                   {socialLinks.map((link) => (
@@ -188,6 +188,17 @@ export default function Home() {
 
         <section id="other-books" className="pb-32 text-center">
           <h2>Other Books from Paul Tarsleh</h2>
+          <p className="lg:px-[130px] md-px-[20px] px-4">
+            Although these old books are offline and cannot be purchased,
+            showcasing them now is to demonstrate that my 2025 books are not
+            based on current events like the changes featured in today’s news
+            stories about Africa. Instead, whatever is in my 2025 book is a
+            piece of the whole that I started telling while I was in Africa in
+            2013 (Revised in 2014 after coming to the US). It also means that
+            Africa’s renaissance was initiated by the Spirit of God as early as
+            2005, even before the physical world started implementing these
+            changes after more than a decade
+          </p>
           <div className="flex gap-4 md:gap-6 justify-center my-4 lg:px-[130px]">
             <img
               src="/images/otherBook1.png"

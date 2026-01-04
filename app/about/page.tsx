@@ -47,7 +47,7 @@ export default function AuthorPage() {
                 </p>
                 <p>
                   This divine instruction led him to publish his first two books
-                  in 2013: <em>Where is the Garden of Eden</em>
+                  in 2013: <em>Where is the Garden of Eden, </em>
                   and <em>The Evolution of Man</em>, while still in Liberia.
                   Upon publication, he received an invitation to attend a book
                   signing event in Miami, Florida, which granted him a one-year
