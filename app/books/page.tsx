@@ -42,7 +42,7 @@ const BooksPage = async () => {
               </p>
             </div>
           ) : (
-            <div className="space-y-16 lg:hidden">
+            <div className="space-y-20 lg:hidden">
               {books.map((book, index) => {
                 const frontCoverUrl = book.coverFront?.asset
                   ? urlFor(book.coverFront)
