@@ -90,7 +90,7 @@ export default function Home() {
                 <div className="aspect-video overflow-hidden rounded-2xl shadow-lg">
                   <iframe
                     className="h-full w-full"
-                    src="https://www.youtube.com/embed/ofMDBJ_xTcs?si=GgbkomrsbDEHts-U"
+                    src="https://www.youtube.com/embed/OfsPe4guvaY"
                     title="Paul Tarsleh YouTube Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
