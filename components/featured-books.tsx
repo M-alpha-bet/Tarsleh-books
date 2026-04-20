@@ -134,7 +134,7 @@ const FeaturedBooks = async () => {
                       {book.purchaseLink ? (
                         <div className="flex justify-between w-[90%]">
                           <a
-                            href={book.purchaseLink}
+                            href={book.purchaseLink ?? "#"}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="green-button inline-flex items-center justify-center"
@@ -143,7 +143,7 @@ const FeaturedBooks = async () => {
                             <FaAmazon className="inline-flex ml-2" />
                           </a>
                           <a
-                            href={book.purchaseLink}
+                            href={book.timsmekLink ?? "#"}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="green-button inline-flex items-center justify-center"

@@ -7,6 +7,7 @@ import {
 } from "react-icons/tb";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import FeaturedBooks from "@/components/featured-books";
+import AudioSection from "@/components/audio-section";
 import LatestBlogPosts from "@/components/blogs";
 import { TbMail } from "react-icons/tb";
 import Footer from "@/components/footer";
@@ -147,6 +148,7 @@ export default function Home() {
           </div>
         </section>
         <FeaturedBooks />
+        <AudioSection />
         <LatestBlogPosts />
 
         <section id="testimonials" className="pb-12">
