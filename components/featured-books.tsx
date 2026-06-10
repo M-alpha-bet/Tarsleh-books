@@ -74,16 +74,20 @@ const FeaturedBooks = async () => {
                     >
                       View Details
                     </a>
-                    <hr className="text-accentColor" />
-                    <a
-                      href={book.timsmekLink ?? "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[13px] w-full mx-auto flex items-center justify-center font-semibold uppercase px-4 py-2"
-                    >
-                      Shop on Timsmek{" "}
-                      <ArrowUpRight className="inline-flex size-4 ml-2" />
-                    </a>
+                    {book.timsmekLink && (
+                      <>
+                        <hr className="text-accentColor" />
+                        <a
+                          href={book.timsmekLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[13px] w-full mx-auto flex items-center justify-center font-semibold uppercase px-4 py-2"
+                        >
+                          Shop on Timsmek{" "}
+                          <ArrowUpRight className="inline-flex size-4 ml-2" />
+                        </a>
+                      </>
+                    )}
 
                     <hr className="text-accentColor" />
                     <a
@@ -142,15 +146,17 @@ const FeaturedBooks = async () => {
                             Buy on Amazon{" "}
                             <FaAmazon className="inline-flex ml-2" />
                           </a>
-                          <a
-                            href={book.timsmekLink ?? "#"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="green-button inline-flex items-center justify-center"
-                          >
-                            Buy on Timsmek{" "}
-                            <ArrowUpRight className="inline-flex ml-2" />
-                          </a>
+                          {book.timsmekLink && (
+                            <a
+                              href={book.timsmekLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="green-button inline-flex items-center justify-center"
+                            >
+                              Buy on Timsmek{" "}
+                              <ArrowUpRight className="inline-flex ml-2" />
+                            </a>
+                          )}
                         </div>
                       ) : (
                         <span className="text-muted-foreground text-sm">
